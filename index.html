@@ -12,6 +12,7 @@
       <div class="main">
         <task-list :task-list="toDoList" @toggle-done="toggleDone" @delete-item="deleteItem"></task-list>
         <input-field @add-task="addToList"></input-field>
+        <footer>{{statistics}}</footer>
       </div>
     </div>
   </body>

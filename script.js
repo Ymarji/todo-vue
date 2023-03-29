@@ -76,5 +76,11 @@ let app = new Vue({
         this.toDoList = this.toDoList.filter((value) => value.id !== id)
         console.log(id);
     }
+  },
+  computed: {
+    statistics() {
+        const done = this.toDoList.filter((value) => value.isDone === true).length
+        return ` Done: ${done} - in Progress ${ this.toDoList.length - done}`
+    }
   }
 })
