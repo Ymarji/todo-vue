@@ -2,10 +2,10 @@ Vue.component("input-field", {
   template: `
     <form action="" class="form" @submit.prevent="addToList">
         <label for="task" class="label">
-            Task :
+            Task : *
             <input placeholder="Task ..." type="text" class="text-input" id="task" v-model="task"/>
         </label>
-    <button type="submit" class="button">To do</button>
+    <button type="submit" class="button" :disabled="task === null || task === ''">To do</button>
   </form>
     `,
   data() {
